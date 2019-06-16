@@ -26,6 +26,7 @@
                 android:layout_width="316dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="#EDF5F8"
                 android:contentDescription="@string/item_fruit"
                 app:srcCompat="@android:drawable/btn_star_big_on" />
 
@@ -39,18 +40,23 @@
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp" />
+                    android:layout_weight="1"
+                    android:textColor="#EB0D59"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/quantity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:textSize="18sp" />
             </LinearLayout>
 

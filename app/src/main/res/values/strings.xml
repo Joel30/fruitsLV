@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Practica3</string>
+    <string name="app_name">Frutas</string>
     <string name="item_fruit">Fruta</string>
     <string name="item_cherry">Cereza</string>
     <string name="item_coconut">Coco</string>

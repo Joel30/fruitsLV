@@ -7,25 +7,24 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.PopupMenu;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener /*, PopupMenu.OnMenuItemClickListener*/{
+public class MainActivity extends AppCompatActivity {
 
     private ArrayList<DataInfo> arrayList;
     private MyAdapter adapter;
     private ListView listView;
-    private int pos = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         loadComponets();
     }
 
@@ -53,7 +52,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 info.setName("CEREZA");
                 info.setDescription("Coco: description");
                 info.setQuantity(1);
-                arrayList.add(info);
+                int cont = 0;
+                for (int i = 0; i < arrayList.size(); i ++) {
+                    if (arrayList.get(i).getName().equals("CEREZA"))
+                        cont = 1;
+                }
+                if (cont == 0){
+                    arrayList.add(info);
+                } else {
+                    Toast.makeText(this, "La fruta ya existe", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
             case R.id.coconut:{
@@ -62,7 +70,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 info.setName("COCO");
                 info.setDescription("Coco: description");
                 info.setQuantity(1);
-                arrayList.add(info);
+                int cont = 0;
+                for (int i = 0; i < arrayList.size(); i ++) {
+                    if (arrayList.get(i).getName().equals("COCO"))
+                        cont = 1;
+                }
+                if (cont == 0){
+                    arrayList.add(info);
+                } else {
+                    Toast.makeText(this, "La fruta ya existe", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
             case R.id.raspberry:{
@@ -71,7 +88,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 info.setName("FRAMBUESA");
                 info.setDescription("Frambuesa: description");
                 info.setQuantity(1);
-                arrayList.add(info);
+                int cont = 0;
+                for (int i = 0; i < arrayList.size(); i ++) {
+                    if (arrayList.get(i).getName().equals("FRAMBUESA"))
+                        cont = 1;
+                }
+                if (cont == 0){
+                    arrayList.add(info);
+                } else {
+                    Toast.makeText(this, "La fruta ya existe", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
             case R.id.strawberry:{
@@ -80,7 +106,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 info.setName("FRESA");
                 info.setDescription("Fresa: description");
                 info.setQuantity(1);
-                arrayList.add(info);
+                int cont = 0;
+                for (int i = 0; i < arrayList.size(); i ++) {
+                    if (arrayList.get(i).getName().equals("FRESA"))
+                        cont = 1;
+                }
+                if (cont == 0){
+                    arrayList.add(info);
+                } else {
+                    Toast.makeText(this, "La fruta ya existe", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
             case R.id.orange:{
@@ -89,7 +124,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 info.setName("NARANJA");
                 info.setDescription("Naranja: description");
                 info.setQuantity(1);
-                arrayList.add(info);
+                int cont = 0;
+                for (int i = 0; i < arrayList.size(); i ++) {
+                    if (arrayList.get(i).getName().equals("NARANJA"))
+                        cont = 1;
+                }
+                if (cont == 0){
+                    arrayList.add(info);
+                } else {
+                    Toast.makeText(this, "La fruta ya existe", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
             case R.id.pineapple:{
@@ -98,7 +142,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 info.setName("PIÑA");
                 info.setDescription("Piña: description");
                 info.setQuantity(1);
-                arrayList.add(info);
+                int cont = 0;
+                for (int i = 0; i < arrayList.size(); i ++) {
+                    if (arrayList.get(i).getName().equals("PIÑA"))
+                        cont = 1;
+                }
+                if (cont == 0){
+                    arrayList.add(info);
+                } else {
+                    Toast.makeText(this, "La fruta ya existe", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
             case R.id.watermelon:{
@@ -107,33 +160,40 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 info.setName("SANDÍA");
                 info.setDescription("Sandía: description");
                 info.setQuantity(1);
-                arrayList.add(info);
+                int cont = 0;
+                for (int i = 0; i < arrayList.size(); i ++) {
+                    if (arrayList.get(i).getName().equals("SANDÍA"))
+                        cont = 1;
+                }
+                if (cont == 0){
+                    arrayList.add(info);
+                } else {
+                    Toast.makeText(this, "La fruta ya existe", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
             case R.id.grapes:{
                 DataInfo info = new DataInfo();
                 info.setImg(R.drawable.uvas);
-                info.setName("Uva");
+                info.setName("UVA");
                 info.setDescription("Uva: description");
                 info.setQuantity(1);
-                arrayList.add(info);
+                int cont = 0;
+                for (int i = 0; i < arrayList.size(); i ++) {
+                    if (arrayList.get(i).getName().equals("UVA"))
+                        cont = 1;
+                }
+                if (cont == 0){
+                    arrayList.add(info);
+                } else {
+                    Toast.makeText(this, "La fruta ya existe", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
         }
         listView.setAdapter(adapter);
         return true;
     }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        System.out.println("-----------------------------------------");
-        System.out.println(view);
-        System.out.println("-----------------------------------------");
-        pos= position;
-        //registerForContextMenu(listView);
-        //showPopup(view);
-    }
-
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -161,7 +221,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             }
             default:
-                Toast.makeText(this, "Jhonattan", Toast.LENGTH_SHORT).show(); break;
+                Toast.makeText(this, "Jhonattan Joel", Toast.LENGTH_SHORT).show(); break;
         }
 
         return true;
