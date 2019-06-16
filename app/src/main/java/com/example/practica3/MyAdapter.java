@@ -55,8 +55,13 @@ public class MyAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 int q = (MyAdapter.this.list.get(position).getQuantity());
-                MyAdapter.this.list.get(position).setQuantity((q+1));
-                quantity.setText(String.valueOf(MyAdapter.this.list.get(position).getQuantity()));
+                if (q < 10){
+                    MyAdapter.this.list.get(position).setQuantity((q+1));
+                    quantity.setText(String.valueOf(MyAdapter.this.list.get(position).getQuantity()));
+                }
+                else {
+                    Toast.makeText(context, "La Cantidad Maxima es de 10", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         return convertView;
