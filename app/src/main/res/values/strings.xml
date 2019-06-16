@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Practica3</string>
+    <string name="item_fruit">Fruta</string>
+    <string name="item_cherry">Cereza</string>
+    <string name="item_coconut">Coco</string>
+    <string name="item_raspberry">Frambuesa</string>
+    <string name="item_strawberry">Fresa</string>
+    <string name="item_orange">Naranja</string>
+    <string name="item_pineapple">Piña</string>
+    <string name="item_watermelon">Sandia</string>
+    <string name="item_grapes">uvas</string>
+    <string name="item_reset">Reiniciar</string>
+    <string name="item_delete">Eliminar</string>
+</resources>
